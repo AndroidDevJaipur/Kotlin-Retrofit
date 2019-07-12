@@ -1,7 +1,8 @@
-package com.mythio.retrofitsample
+package com.mythio.retrofitsample.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.mythio.retrofitsample.R
 
 class MainActivity : AppCompatActivity() {
 
