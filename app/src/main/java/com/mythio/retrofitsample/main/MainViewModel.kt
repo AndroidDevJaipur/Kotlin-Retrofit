@@ -21,7 +21,7 @@ class MainViewModel : ViewModel() {
     }
 
     fun getUserData(profile: String) {
-        val api = GithubApi.retrofitService.getProperties(profile)
+        val api = GithubApi.retrofitService.getUserData(profile)
 
         api.enqueue(object : Callback<GithubUser> {
             override fun onFailure(call: Call<GithubUser>, t: Throwable) {

@@ -27,6 +27,7 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{viewModel.userData.name}"
             app:layout_constraintLeft_toRightOf="@id/iv_profile"
             app:layout_constraintTop_toTopOf="@id/iv_profile" />
 
@@ -34,6 +35,7 @@
             android:id="@+id/tv_handle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{viewModel.userData.login}"
             app:layout_constraintLeft_toRightOf="@id/iv_profile"
             app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
