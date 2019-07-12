@@ -18,4 +18,12 @@ data class GithubUser(
     var followers: Int,
     @SerializedName("following")
     var following: Int
-)
+) {
+    fun getFollowers(): String {
+        return "Followers " + followers
+    }
+
+    fun getFollowing(): String {
+        return "Following " + following
+    }
+}
