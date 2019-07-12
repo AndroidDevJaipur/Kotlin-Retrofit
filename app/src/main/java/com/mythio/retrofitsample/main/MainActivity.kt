@@ -1,6 +1,7 @@
 package com.mythio.retrofitsample.main
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
@@ -17,10 +18,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding: ActivityMainBinding = DataBindingUtil
                 .setContentView(this, R.layout.activity_main)
+        binding.lifecycleOwner = this
+        binding.viewModel = viewModel
 
         binding.btnSearch.setOnClickListener {
             if (binding.etProfileName.text.isNotBlank()) {
                 viewModel.getUserData(binding.etProfileName.text.toString())
+                Log.d("TAG_TAG", "click")
             }
         }
     }
